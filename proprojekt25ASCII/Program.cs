@@ -32,51 +32,55 @@ namespace proprojekt25ASCII
 
             for(int i = 0; i < alinjer.Length; i++)
             {
+                cursorpoint = 0;
 
                 for (int y = 0; y < input.Length; y++)
                 {
 
                     if (input[y] == 'a')
                     {
-                        Console.SetCursorPosition(startx, starty + i);
-                        Console.Write(alinjer[i]);
-                        cursorpoint = startx + 15;
-                        
-                    }
-                    
-                }
-                Console.SetCursorPosition(cursorpoint, starty + i);
 
-                for (int y = 0; y < input.Length; y++)
-                {
-                    
-                    
+                        Console.SetCursorPosition(startx, starty + i);
+                        
+                        Console.SetCursorPosition(cursorpoint, starty + i);
+                        Console.Write(alinjer[i]);
+                        cursorpoint = cursorpoint + 15;
+                    }
+
+
+
+
+
+
+
                     if (input[y] == 'b')
                     {
                         Console.SetCursorPosition(startx, starty + i);
-                        Console.Write(blinjer[i]);
-                        cursorpoint = startx + 30;
                         
-
+                        
+                        Console.SetCursorPosition(cursorpoint, starty + i);
+                        Console.Write(blinjer[i]);
+                        cursorpoint = cursorpoint + 15;
                     }
-                    
 
-                }
-                Console.SetCursorPosition(cursorpoint, starty + i);
-                for (int y = 0; y < input.Length; y++)
-                {
-                    
+
+
+
+
+
 
                     if (input[y] == 'c')
                     {
                         Console.SetCursorPosition(startx, starty + i);
-                        Console.Write(clinjer[i]);
-                        cursorpoint = startx + 45;
                         
+                        
+                        Console.SetCursorPosition(cursorpoint, starty + i);
+                        Console.Write(clinjer[i]);
+                        cursorpoint = cursorpoint + 15;
                     }
-                    
+
+
                 }
-                Console.SetCursorPosition(cursorpoint, starty + i);
 
             }
 
