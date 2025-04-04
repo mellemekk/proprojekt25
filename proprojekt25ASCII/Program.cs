@@ -12,6 +12,7 @@ namespace proprojekt25ASCII
     internal class Program
     {
         static int cursorpoint = 0;
+        
 
         static Regex filter = new Regex(@"[^a-zA-Z\s]");
         static void Main(string[] args)
@@ -58,9 +59,13 @@ namespace proprojekt25ASCII
 
             while (true)
             {
-                Console.WriteLine("Skriv det du vill ha i ASCII : ");
+                
+                Console.WriteLine("Skriv det du vill ha i ASCII : " );
+                Console.WriteLine();
                 string input = Console.ReadLine();
+                
                 bool containsnumbers = filter.IsMatch(input);
+                Console.Clear();
                 if (containsnumbers)
                 {
                     Console.WriteLine("No siffrer or symboler thanks you very kindly!!");
@@ -71,27 +76,40 @@ namespace proprojekt25ASCII
                     Console.Clear();
                     
                 }
+                
+
+
+
                 if (input != "clear")
                 {
 
                 
                 for (int i = 0; i < alinjer.Length; i++)
                 {
+                        starty = 2;
                     cursorpoint = 0;
+                        
 
                         for (int y = 0; y < input.Length; y++)
                         {
+                            if (cursorpoint > Console.WindowWidth)
+                            {
+                                starty = starty + 9;
+                                cursorpoint = 0;
+                            }
+                            
+
 
                             if (input[y] == 'a')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(alinjer[i]);
                                 cursorpoint = cursorpoint + 15;
                             }
-
+                            
 
 
 
@@ -101,7 +119,7 @@ namespace proprojekt25ASCII
 
                             if (input[y] == 'b')
                             {
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
@@ -117,7 +135,7 @@ namespace proprojekt25ASCII
 
                             if (input[y] == 'c')
                             {
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
@@ -128,7 +146,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'd')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(dlinjer[i]);
@@ -138,7 +156,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'e')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(elinjer[i]);
@@ -148,7 +166,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'f')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(flinjer[i]);
@@ -159,7 +177,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'g')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(glinjer[i]);
@@ -169,7 +187,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'h')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(hlinjer[i]);
@@ -179,7 +197,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'i')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(ilinjer[i]);
@@ -189,7 +207,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'j')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(jlinjer[i]);
@@ -199,7 +217,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'k')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(klinjer[i]);
@@ -209,7 +227,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'l')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(llinjer[i]);
@@ -218,7 +236,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'm')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(mlinjer[i]);
@@ -227,7 +245,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'n')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(nlinjer[i]);
@@ -237,7 +255,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'o')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(olinjer[i]);
@@ -246,7 +264,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'p')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(plinjer[i]);
@@ -255,7 +273,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'q')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(qlinjer[i]);
@@ -264,7 +282,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'r')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(rlinjer[i]);
@@ -273,7 +291,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 's')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(slinjer[i]);
@@ -282,7 +300,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 't')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(tlinjer[i]);
@@ -291,7 +309,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'u')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(ulinjer[i]);
@@ -300,7 +318,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'v')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(vlinjer[i]);
@@ -309,7 +327,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'w')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(wlinjer[i]);
@@ -318,7 +336,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'x')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(xlinjer[i]);
@@ -327,7 +345,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'y')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(ylinjer[i]);
@@ -336,7 +354,7 @@ namespace proprojekt25ASCII
                             if (input[y] == 'z')
                             {
 
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(zlinjer[i]);
@@ -344,20 +362,23 @@ namespace proprojekt25ASCII
                             }
                             if (input[y] == ' ')
                             {
-                                Console.SetCursorPosition(startx, starty + i);
+                                
 
                                 Console.SetCursorPosition(cursorpoint, starty + i);
                                 Console.Write(' ');
                                 cursorpoint = cursorpoint + 15;
                             }
+                           
+
 
 
                         }
-                        }
-
+                        
                     }
+                    
+                }
 
-                Console.ReadKey();
+                
             }
 
         }
